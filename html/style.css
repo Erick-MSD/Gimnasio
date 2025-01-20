@@ -198,3 +198,39 @@ img {
         font-size: 1.2em; /* Mantener el tamaño de fuente original */
     }
 }
+/* Planes de la pagina de inicio */
+
+.plan-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    max-width: 1800px;
+    margin: 20px;
+    padding: 10px;
+    
+}
+
+.plan {
+    border: 2px solid green; 
+    border-radius: 20px; 
+    padding: 20px;
+    text-align: center;
+    background-color: white; 
+    transition: transform 0.3s 
+}
+
+.plan:hover {
+    transform: scale(1.05); 
+}
+
+.plan-title {
+    font-size: 1.5em;
+    color: #2c2b2b;
+    margin-bottom: 10px;
+}
+
+.plan-details {
+    font-size: 1.05em;
+    color: #757272;
+
+}
