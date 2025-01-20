@@ -77,7 +77,7 @@ img {
 
 .rounded-video {
     width: 100%;
-    max-width: 800px;
+    max-width: 800px; /* Asegurar que el video no sea demasiado grande */
     border-radius: 15px;
 }
 
@@ -140,4 +140,56 @@ img {
     font-family: "Lato", serif;
     font-weight: 900;
     font-style: italic;
+}
+
+/* Media Query para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+    /* Ajustar la disposición del encabezado */
+    .custom-header .container {
+        flex-direction: column; /* Cambiar la disposición de fila a columna */
+        text-align: center; /* Alinear el contenido al centro */
+    }
+
+    .logo {
+        max-width: 120px; /* Hacer el logo más pequeño en móviles */
+        margin-bottom: 15px; /* Separar el logo de la navegación */
+    }
+
+    /* Hacer que los botones de navegación estén debajo del logo */
+    .nav-buttons {
+        flex-direction: column; /* Apilar los botones en columna */
+        align-items: center; /* Centrar los botones */
+        width: auto; /* Ajustar el ancho de los botones */
+    }
+
+    .nav-buttons .btn-custom {
+        width: 100%; /* Hacer que los botones ocupen el 100% del ancho disponible */
+        padding: 20px 0; /* Aumentar el padding para alargar los botones */
+        font-size: 1.2em; /* Hacer el texto un poco más grande */
+        margin-bottom: 10px; /* Separar los botones */
+    }
+
+    .nav-buttons .btn-custom:last-child {
+        background-color: #23d023; /* Mantener el color verde en el último botón */
+    }
+
+    /* Ajustar el mapa en dispositivos móviles */
+    iframe {
+        width: 100%; /* Asegurar que el mapa ocupe el 100% del ancho */
+        height: 200px; /* Reducir la altura del mapa en pantallas pequeñas */
+    }
+}
+
+/* Asegurarse de que el menú vuelva a su estado horizontal en pantallas grandes */
+@media (min-width: 769px) {
+    .nav-buttons {
+        flex-direction: row; /* Asegurar que el menú sea horizontal en pantallas grandes */
+        justify-content: space-between; /* Espacio entre los elementos del menú */
+    }
+
+    .nav-buttons .btn-custom {
+        width: auto; /* Volver al tamaño original de los botones */
+        padding: 15px 30px; /* Espacio interno original */
+        font-size: 1.2em; /* Mantener el tamaño de fuente original */
+    }
 }
