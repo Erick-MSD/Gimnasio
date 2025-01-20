@@ -38,32 +38,32 @@ img {
 .nav-buttons {
     display: flex;
     gap: 10px;
-    background-color: rgb(20, 30, 51); /* Gris claro */
+    background-color: rgb(20, 30, 51);
     padding: 10px;
     border-radius: 5px;
     width: 100%;
     justify-content: space-between;
-    align-items: center; /* Centrar verticalmente */
+    align-items: center;
 }
 
 .nav-buttons .btn-custom {
-    background-color: #d1cfcf; /* Gris claro */
+    background-color: #d1cfcf;
     color: rgb(5, 5, 6);
     border: none;
     padding: 15px 30px;
-    border-radius: 0; /* Botones cuadrados */
-    font-size: 1.2em; /* Texto más grande */
+    border-radius: 0;
+    font-size: 1.2em;
     flex: 1;
     text-align: center;
 }
 
 .nav-buttons .btn-custom:last-child {
-    background-color: #23d023; /* Verde claro */
+    background-color: #23d023;
     color: rgb(2, 2, 2);
 }
 
 .nav-buttons .btn-custom:hover {
-    background-color: #007bff; /* Azul */
+    background-color: #007bff;
     color: white;
 }
 
@@ -82,7 +82,7 @@ img {
 
 .rounded-video {
     width: 100%;
-    max-width: 800px; /* Asegurar que el video no sea demasiado grande */
+    max-width: 800px;
     border-radius: 15px;
 }
 
@@ -117,110 +117,58 @@ img {
     font-style: normal;
 }
 
-.lato-thin-italic {
-    font-family: "Lato", serif;
-    font-weight: 100;
-    font-style: italic;
-}
-
-.lato-light-italic {
-    font-family: "Lato", serif;
-    font-weight: 300;
-    font-style: italic;
-}
-
-.lato-regular-italic {
-    font-family: "Lato", serif;
-    font-weight: 400;
-    font-style: italic;
-}
-
-.lato-bold-italic {
-    font-family: "Lato", serif;
-    font-weight: 700;
-    font-style: italic;
-}
-
-.lato-black-italic {
-    font-family: "Lato", serif;
-    font-weight: 900;
-    font-style: italic;
-}
-
 /* Media Query para pantallas pequeñas (dispositivos móviles) */
 @media (max-width: 768px) {
-    /* Ajustar la disposición del encabezado */
     .custom-header .container {
-        flex-direction: column; /* Cambiar la disposición de fila a columna */
-        text-align: center; /* Alinear el contenido al centro */
+        flex-direction: column;
+        text-align: center;
     }
 
     .logo {
-        max-width: 120px; /* Hacer el logo más pequeño en móviles */
-        margin-bottom: 15px; /* Separar el logo de la navegación */
+        max-width: 120px;
+        margin-bottom: 15px;
     }
 
-    /* Hacer que los botones de navegación estén debajo del logo */
     .nav-buttons {
-        flex-direction: column; /* Apilar los botones en columna */
-        align-items: center; /* Centrar los botones */
-        width: auto; /* Ajustar el ancho de los botones */
+        flex-direction: column;
+        align-items: center;
+        width: auto;
     }
 
     .nav-buttons .btn-custom {
-        width: 100%; /* Hacer que los botones ocupen el 100% del ancho disponible */
-        padding: 20px 0; /* Aumentar el padding para alargar los botones */
-        font-size: 1.2em; /* Hacer el texto un poco más grande */
-        margin-bottom: 10px; /* Separar los botones */
+        width: 100%;
+        padding: 20px 0;
+        font-size: 1.2em;
+        margin-bottom: 10px;
     }
 
-    .nav-buttons .btn-custom:last-child {
-        background-color: #23d023; /* Mantener el color verde en el último botón */
-    }
-
-    /* Ajustar el mapa en dispositivos móviles */
     iframe {
-        width: 100%; /* Asegurar que el mapa ocupe el 100% del ancho */
-        height: 200px; /* Reducir la altura del mapa en pantallas pequeñas */
+        width: 100%;
+        height: 200px;
     }
 }
 
-/* Asegurarse de que el menú vuelva a su estado horizontal en pantallas grandes */
-@media (min-width: 769px) {
-    .nav-buttons {
-        flex-direction: row; /* Asegurar que el menú sea horizontal en pantallas grandes */
-        justify-content: space-between; /* Espacio entre los elementos del menú */
-    }
-
-    .nav-buttons .btn-custom {
-        width: auto; /* Volver al tamaño original de los botones */
-        padding: 15px 30px; /* Espacio interno original */
-        font-size: 1.2em; /* Mantener el tamaño de fuente original */
-    }
-}
-/* Planes de la pagina de inicio */
-
+/* Planes de la página de inicio */
 .plan-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     max-width: 1800px;
     margin: 20px;
     padding: 10px;
-    
 }
 
 .plan {
-    border: 2px solid green; 
-    border-radius: 20px; 
+    border: 2px solid green;
+    border-radius: 20px;
     padding: 20px;
     text-align: center;
-    background-color: white; 
-    transition: transform 0.3s 
+    background-color: white;
+    transition: transform 0.3s;
 }
 
 .plan:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .plan-title {
@@ -232,5 +180,44 @@ img {
 .plan-details {
     font-size: 1.05em;
     color: #757272;
+}
 
+/* Cambios solo para móviles */
+@media (max-width: 768px) {
+    .plan-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .plan {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .plan-details {
+        max-height: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Animación al cargar */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
