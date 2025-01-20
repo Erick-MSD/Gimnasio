@@ -5,7 +5,7 @@ body {
     font-family: "Lato";
     line-height: 1.6;
     margin: 20px;
-    background-color: rgb(233, 232, 232);
+    background-color: rgb(20, 33, 51);
 }
 
 /* Estilos de imágenes */
@@ -30,7 +30,7 @@ img {
 
 /* Header personalizado */
 .custom-header {
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(20, 30, 51);
     color: black;
     border-bottom: 10px solid black;
 }
@@ -38,7 +38,7 @@ img {
 .nav-buttons {
     display: flex;
     gap: 10px;
-    background-color: #d5d1d1; /* Gris claro */
+    background-color: rgb(20, 30, 51); /* Gris claro */
     padding: 10px;
     border-radius: 5px;
     width: 100%;
@@ -64,6 +64,11 @@ img {
 
 .nav-buttons .btn-custom:hover {
     background-color: #007bff; /* Azul */
+    color: white;
+}
+
+/* Sección nosotros */
+.nosotros {
     color: white;
 }
 
