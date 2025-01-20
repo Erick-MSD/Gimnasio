@@ -199,25 +199,27 @@ img {
         width: 90%;
         max-width: 400px;
     }
-
+    
     .plan-details {
         max-height: 200px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
+    
     /* Animación al cargar */
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Animación */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
+    .plan {
+        animation: fadeIn 0.5s ease-in-out;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    /* Animación */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
