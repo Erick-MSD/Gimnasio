@@ -1,143 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-/* General */
-body {
-    font-family: "Lato";
-    line-height: 1.6;
-    margin: 20px;
-    background-color: rgb(233, 232, 232);
-}
-
-/* Estilos de imágenes */
-img {
-    height: auto;
-    margin: 10px 0;
-}
-
-.logo {
-    max-width: 100px;
-}
-
-.gym-image {
-    max-width: 300px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Header personalizado */
-.custom-header {
-    background-color: rgb(232, 232, 232);
-    color: black;
-    border-bottom: 10px solid black;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 10px;
-    background-color: #d5d1d1; /* Gris claro */
-    padding: 10px;
-    border-radius: 5px;
+/* Header actualizado */
+.header {
+    background-color: #1a1a1a; /* Color de fondo oscuro */
+    color: #fff; /* Color de texto */
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
     justify-content: space-between;
-    align-items: center; /* Centrar verticalmente */
-}
-
-.nav-buttons .btn-custom {
-    background-color: #d1cfcf; /* Gris claro */
-    color: rgb(5, 5, 6);
-    border: none;
-    padding: 15px 30px;
-    border-radius: 0; /* Botones cuadrados */
-    font-size: 1.2em; /* Texto más grande */
-    flex: 1;
-    text-align: center;
-}
-
-.nav-buttons .btn-custom:last-child {
-    background-color: #23d023; /* Verde claro */
-    color: rgb(2, 2, 2);
-}
-
-.nav-buttons .btn-custom:hover {
-    background-color: #007bff; /* Azul */
-    color: white;
-}
-
-/* Video personalizado */
-.video-container {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 20px 0;
 }
 
-.rounded-video {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 15px;
-}
-
-/* Variantes de fuente Lato */
-.lato-thin {
-    font-family: "Lato", serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-.lato-light {
-    font-family: "Lato", serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.lato-regular {
-    font-family: "Lato", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.lato-bold {
-    font-family: "Lato", serif;
+.header .logo {
+    font-size: 24px;
     font-weight: 700;
-    font-style: normal;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
-.lato-black {
-    font-family: "Lato", serif;
-    font-weight: 900;
-    font-style: normal;
+.header .navmenu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.lato-thin-italic {
-    font-family: "Lato", serif;
-    font-weight: 100;
-    font-style: italic;
+.header .navmenu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
-.lato-light-italic {
-    font-family: "Lato", serif;
-    font-weight: 300;
-    font-style: italic;
+.header .navmenu ul li {
+    position: relative;
 }
 
-.lato-regular-italic {
-    font-family: "Lato", serif;
-    font-weight: 400;
-    font-style: italic;
+.header .navmenu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s;
+    border-radius: 5px;
 }
 
-.lato-bold-italic {
-    font-family: "Lato", serif;
-    font-weight: 700;
-    font-style: italic;
+.header .navmenu ul li a:hover {
+    background-color: #444;
+    color: #f39c12;
 }
 
-.lato-black-italic {
-    font-family: "Lato", serif;
-    font-weight: 900;
-    font-style: italic;
+.header .navmenu .dropdown ul {
+    display: none;
+    position: absolute;
+    background: #333;
+    padding: 10px 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header .navmenu .dropdown:hover ul {
+    display: block;
+}
+
+.header .navmenu .dropdown ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    text-align: left;
+}
+
+.header .navmenu .dropdown ul li a:hover {
+    background-color: #444;
+    color: #f39c12;
+}
+
+.header .mobile-nav-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .header .logo {
+        margin-bottom: 10px;
+    }
+
+    .header .navmenu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #1a1a1a;
+        padding: 10px 0;
+    }
+
+    .header .navmenu.open {
+        display: flex;
+    }
+
+    .header .navmenu ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header .navmenu ul li a {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .header .mobile-nav-toggle {
+        display: block;
+    }
 }
